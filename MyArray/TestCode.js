@@ -23,8 +23,7 @@ console.log("testing max", myArray.max());
 console.log("testing mean", myArray.mean());
 console.log("testing at", myArray.at(2));
 myArray.fill(10);
-console.log("testing size", myArray.size);
-console.log("testing fill", myArray.at(4));
+console.log("testing size", myArray);
 // Below is supposed to fail
 myArray.fastRandom('d', 'blargh');
 console.log("testing fastRandom fail", myArray.at(5));

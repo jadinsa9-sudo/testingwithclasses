@@ -92,8 +92,7 @@ class MyArray {
     }
     const remainingCapacity = this.capacity - this.size;
     for (let i = 0; i < remainingCapacity; i++) {
-      this.array[i] = item;
-      this.size++;
+      this.array[this.size++] = item;
     }
   }
   fastRandom(min, max) {
@@ -140,7 +139,7 @@ class MyArray {
     }
     const newSize = to - from + 1;
     for (let i = from; i < this.size - newSize; i++) {
-      this.array[i] = this.array[to + i - 1];
+      this.array[i] = this.array[i + newSize];
     }
     this.size -= newSize;
   }
